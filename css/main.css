@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,89 +92,244 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	text-decoration: none;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-/* ------------- Custome styles ------------- */
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: #441e5d;
+	font-family: comfortaa;
+}
+
+/* --------------------------------------------------
+                  Custom styles 
+----------------------------------------------------- */
 
 
-.slanted{
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+/* ------------- Green slanted rectangles ------------- */
+.slanted {
 	position: relative;
 	width: 100%;
-	height: 20em;
+	height: 12em;
 	content: '';
 	background-color: c7e12e;
 	z-index: -1;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
 	transform-origin: top left;
 	transform: skewY(-4deg);
 }
 
-nav ul{
-	position: absolute;
-	right: 0;
+/* ------------- Nav bar ------------- */
+nav ul {
 	color: #441e5d;
 	font-family: comfortaa;
-	font-size: 1.5em;
-	font-weight: bold;
+	position: absolute;
+	right: 0;
 	display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+	font-size: 1em;
+	font-weight: bold;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
 
 nav ul li {
-	padding: 2em 3em;
+	padding: 1em;
 }
 
-.head{
+li:hover {
+	transform: scale(1.15);
+	transition: ease-in-out;
+	transition-duration: 0.2s;
+}
+
+
+/* ------------- Site title ------------- */
+.head {
 	position: relative;
 	bottom: 7.5em;
 }
-.head h1{
-	font-size: 7em;
-	color: #441e5d;
-	font-family: comfortaa;
+
+.head h1 {
+	font-size: 3em;
 	font-weight: bold;
 	text-align: center;
 	max-width: 1200px;
-    margin: 0 auto;
+	margin: 0 auto;
 }
 
-.head h2{
-	font-size: 5em;
-	color: #441e5d;
-	font-family: comfortaa;
+.head h2 {
+	font-size: 2em;
 	text-align: center;
 	max-width: 1200px;
-    margin: 0 auto;
+	margin: 0 auto;
 }
 
-.icecream img{
+
+/* ------------- Banner image ------------- */
+.icecream img {
 	width: 100%;
 }
 
+img {
+	width: 100%;
+}
+
+/* ------------- Homepage info ------------- */
+
+h3 {
+	font-size: 1.5em;
+	margin: 0.5em 0;
+}
+
+.info div {
+	padding: 1em;
+	text-align: center;
+}
+
+.info a {
+	color: #c7e12e;
+	padding: 1em;
+	background-color: #441e5d;
+	border-radius: 50px;
+}
+
+.info p {
+	margin: 0.5em 0 2em 0;
+}
+
+.flavours ul {
+	align: center;
+	padding: 4em;
+	display: flex;
+	justify-content: center;
+}
+
+.flavours li {
+	text-align: center;
+	width: 20em;
+	height: auto;
+}
+
+/* ------------- Footer ------------- */
+
+.footer {
+	width: 100%;
+	color: #441e5d;
+	font-family: comfortaa;
+	position: absolute;
+}
+
+.contactfooter a {
+	color: #c7e12e;
+	padding: 1em;
+	background-color: #441e5d;
+	border-radius: 50px;
+	margin-bottom: 3em;
+
+}
+
+.contactfooter {
+	text-align: right;
+	margin: 0 1em;
+}
+
+.slantedbottom {
+	position: relative;
+	width: 100%;
+	height: 10em;
+	content: '';
+	background-color: c7e12e;
+	z-index: -1;
+	transform-origin: bottom right;
+	transform: skewY(-4deg);
+}
+
+/* -------------------------------------------------------------------
+                    Desktop Styles
+------------------------------------------------------------------- */
+@media screen and (min-width:600px) {
+
+	html {
+		font-size: 16px;
+	}
+
+	/* ------------- Green slanted rectangles ------------- */
+	.slanted {
+		position: relative;
+		width: 100%;
+		height: 20em;
+		content: '';
+		background-color: c7e12e;
+		z-index: -1;
+		transform-origin: top left;
+		transform: skewY(-4deg);
+	}
+
+
+	/* ------------- Headings ------------- */
+	.head h1 {
+		font-size: 7em;
+	}
+
+	.head h2 {
+		font-size: 5em;
+	}
+
+	nav ul {
+		font-size: 1.5em;
+	}
+
+	nav ul li {
+		padding: 2em 3em;
+	}
+
+}

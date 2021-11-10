@@ -283,6 +283,10 @@ button {
 	}
 }
 
+.flavours {
+	margin-bottom: 4em;
+}
+
 .flavours li:hover {
 	animation-name: wobble;
 	animation-duration: 2s;
@@ -310,57 +314,86 @@ button {
 
 .footer {
 	width: 100%;
-	color: #441e5d;
 	font-family: comfortaa;
 	position: absolute;
+	display: grid;
+	grid-template-areas:
+		"empty button"
+		"copyright info"
 }
 
-.contactfooter a {
-	color: #c7e12e;
-	padding: 1em;
-	background-color: #441e5d;
-	border-radius: 50px;
-	margin-bottom: 3em;
-
-}
+/* Footer info */
 .contactfooter {
+	text-align: right;
+	margin: 0 1em;
+	grid-area: info;
+	margin-top: 1em;
+}
+
+/* Copyright */
+.copyright {
+	margin: 0 1em;
+	grid-area: copyright;
+	margin-top: 1em;
+}
+
+/* Contact button */
+.contactbutton {
+	grid-area: button;
 	text-align: right;
 	margin: 0 1em;
 }
 
-/* ------------- For some reason I couldn't get the green box to sit on the page the same way the header one did. This is the code that formats the bottom box on all pages. ------------- */
-.slantedbottom {
-	position: relative;
-	width: 100%;
-	height: 10em;
+.footer a{
+	font-size: 2em;
+	border-radius: 50px;
+	border: 2px solid #441e5d;
+	padding: 0.2em;
+}
+
+/* Green slanted divs */
+.bottom {
+	content: '';
+	display: block;
 	background-color: c7e12e;
-	z-index: -1;
-	transform-origin: bottom right;
+	width: 100%;
+	height: 137px;
+	position: absolute;
 	transform: skewY(-4deg);
+	transform-origin: left bottom;
+	z-index: -1;
+}
+
+.slantedbottom {
+	content: '';
+	display: block;
+	background-color: c7e12e;
+	width: 100%;
+	height: 137px;
+	position: absolute;
+	transform-origin: left bottom;
+	z-index: -2;
 }
 
 
-/* ---------------------------------------------------------------------------------------------------------------
-                  ABOUT PAGE AND SPECIALTIES PAGE
------------------------------------------------------------------------------------------------------------------- */
 
-.portrait img {
-	margin: 0 1em;
+/* ------------------------------- ABOUT PAGE AND SPECIALTIES PAGE ------------------------------------------------------- */
+
+.abouthead img {
+	margin: 2em 0 0 0;
 }
 
 .aboutinfo {
 	padding: 2em 6em;
 }
 
-.aboutinfo p{
+.aboutinfo p {
 	text-align: center;
-	margin: 3em 0;
+	margin: 3em 0 8em 0;
 }
 
 
-/* ---------------------------------------------------------------------------------------------------------------
-                  CONTACT PAGE
------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------- CONTACT PAGE ------------------------------------------------------------------ */
 
 .contact {
 	padding: 2em 6em;
@@ -413,7 +446,6 @@ button {
 		transform: skewY(-4deg);
 	}
 
-
 	/* ------------- Headings ------------- */
 	.head h1 {
 		font-size: 7em;
@@ -431,7 +463,7 @@ button {
 		padding: 2em 3em;
 	}
 
-/* ------------- When you make the page bigger, this info will snap into a 2x2 grid so the pictures do not take up too much room and that all the info is easier to see. ------------- */
+	/* ------------- When you make the page bigger, this info will snap into a 2x2 grid so the pictures do not take up too much room and that all the info is easier to see. ------------- */
 	.info {
 		display: grid;
 		justify-content: center;
